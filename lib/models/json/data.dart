@@ -1,11 +1,11 @@
 import 'package:simplon_waste_management/models/json/district.dart';
-import 'package:simplon_waste_management/models/json/service.dart';
+import 'package:simplon_waste_management/models/json/json_service.dart';
 
 class Data {
 
   // PROPERTIES
   final List<District>? districts;
-  final List<Service>? services;
+  final List<JsonService>? services;
 
   // CONSTRUCTOR
   Data({this.districts, this.services});
@@ -18,7 +18,7 @@ class Data {
         .toList();
 
     var servicesFromJson = parsedJson['services'] as List;
-    List<Service> services = servicesFromJson.map((e) => Service.fromJson(e))
+    List<JsonService> services = servicesFromJson.map((e) => JsonService.fromJson(e))
         .toList();
 
     return Data(

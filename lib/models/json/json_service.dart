@@ -1,6 +1,6 @@
 
 
-class Service {
+class JsonService {
 
   // PROPERTIES
   final String? type;
@@ -11,11 +11,11 @@ class Service {
   final int? foyer;
 
   // CONSTRUCTOR
-  Service({this.type, this.furnaceLines, this.lineCapacity, this.capacity, this.acceptedPlastics, this.foyer});
+  JsonService({this.type, this.furnaceLines, this.lineCapacity, this.capacity, this.acceptedPlastics, this.foyer});
 
   // FACTORY
-  factory Service.fromJson(Map<String, dynamic> parsedJson) {
-    return Service(
+  factory JsonService.fromJson(Map<String, dynamic> parsedJson) {
+    return JsonService(
       type: parsedJson['type'],
       furnaceLines: parsedJson['ligneFour'],
       lineCapacity: parsedJson['capaciteLigne'],
